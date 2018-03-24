@@ -83,11 +83,15 @@ something like 'file:///tmp/x.svg' into your address bar. You can also
 get the Firefox addon that can auto-reload files when they change on 
 disk.
 
-Another option is to use svg view/edit programs like Inkscape.
+Another option is to use svg view/edit programs like Inkscape or Adobe
+Illustrator.
 
 Example 3 was created by github user Ebraminio to generate multiple .svg 
 files from a single GPL font of ancient Persian letters ( Xerxes.ttf, 
 available by a web search )
+
+Example 4 was created by [Vinyl Darkscratch](http://www.queengoob.org) to
+generate an .svg file for every single glyph available in a given font.
 
 ### Detail on using in your own project
 
