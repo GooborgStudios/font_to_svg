@@ -11,11 +11,11 @@
   freely, subject to the following restrictions:
 
   1. The origin of this software must not be misrepresented; you must not
-     claim that you wrote the original software. If you use this software
-     in a product, an acknowledgment in the product documentation would be
-     appreciated but is not required.
+	 claim that you wrote the original software. If you use this software
+	 in a product, an acknowledgment in the product documentation would be
+	 appreciated but is not required.
   2. Altered source versions must be plainly marked as such, and must not be
-     misrepresented as being the original software.
+	 misrepresented as being the original software.
   3. This notice may not be removed or altered from any source distribution.
 
   License based on zlib license, by Jean-loup Gailly and Mark Adler
@@ -40,8 +40,7 @@ endorsement.
 
 */
 
-#ifndef __font_to_svg_h__
-#define __font_to_svg_h__
+#pragma once
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
@@ -308,7 +307,7 @@ public:
 		return tmp.str();
 	}
 
-	std::string svgborder()  {
+	std::string svgborder() {
 		tmp.str("");
 		tmp << "\n\n <!-- draw border -->";
 
@@ -335,7 +334,7 @@ public:
 		return tmp.str();
 	}
 
-	std::string axes()  {
+	std::string axes() {
 		tmp.str("");
 		tmp << "\n\n  <!-- draw axes --> ";
 		tmp << "\n <path stroke='blue' stroke-dasharray='5,5' d='"
@@ -347,7 +346,7 @@ public:
 		return tmp.str();
 	}
 
-	std::string typography_box()  {
+	std::string typography_box() {
 		tmp.str("");
 		tmp << "\n\n  <!-- draw bearing + advance box --> ";
 		int x1 = 0;
@@ -365,7 +364,7 @@ public:
 		return tmp.str();
 	}
 
-	std::string points()  {
+	std::string points() {
 		tmp.str("");
 		tmp << "\n\n  <!-- draw points as circles -->";
 		for ( int i = 0 ; i < ftoutline.n_points ; i++ ) {
@@ -400,7 +399,7 @@ public:
 		return tmp.str();
 	}
 
-	std::string pointlines()  {
+	std::string pointlines() {
 		tmp.str("");
 		tmp << "\n\n  <!-- draw straight lines between points -->";
 		tmp << "\n  <path fill='none' stroke='green' d='";
@@ -415,8 +414,8 @@ public:
 			tmp << "\n  <path fill='none' stroke='green'";
 			tmp << dash_mod;
 			tmp << " d='";
- 			tmp << " M " << ftpoints[i].x << "," << ftpoints[i].y;
- 			tmp << " L " << ftpoints[(i+1)%ftoutline.n_points].x << "," << ftpoints[(i+1)%ftoutline.n_points].y;
+			tmp << " M " << ftpoints[i].x << "," << ftpoints[i].y;
+			tmp << " L " << ftpoints[(i+1)%ftoutline.n_points].x << "," << ftpoints[(i+1)%ftoutline.n_points].y;
 			tmp << "\n  '/>";
 		}
 		return tmp.str();
@@ -437,14 +436,14 @@ public:
 		return tmp.str();
 	}
 
-	std::string outline()  {
+	std::string outline() {
 		std::vector<FT_Vector> pointsv(ftpoints,ftpoints+ftoutline.n_points);
 		std::vector<char> tagsv(tags,tags+ftoutline.n_points);
 		std::vector<short> contoursv(contours,contours+ftoutline.n_contours);
 		return do_outline(pointsv, tagsv, contoursv);
 	}
 
-	std::string svgfooter()  {
+	std::string svgfooter() {
 		tmp.str("");
 		tmp << "\n </g>\n</svg>\n";
 		return tmp.str();
@@ -452,6 +451,3 @@ public:
 };
 
 } // namespace
-
-#endif
-
