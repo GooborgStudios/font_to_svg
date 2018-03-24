@@ -165,6 +165,8 @@ p1 is 'off the curve'. In other words, p1 is a 'control point'.
 
 ![Bezier.gif](assets/bezier.gif " The Letter B ")
 
+_Image Source: [Wikipedia](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#/media/File:B%C3%A9zier_2_big.gif)_
+
 The math is not actually as complicated as it looks on the wiki page- 
 you can draw a Bezier Quadratic using only a ruler and a pencil. I.E. 
 you can actually do it without any transcendental functions or 
