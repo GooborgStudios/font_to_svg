@@ -1,5 +1,5 @@
 //
-// example4.cpp - font_to_svg
+// extractAllGlyphs.cpp - font_to_svg
 // Vinyl Darkscratch © 2018, MIT License.
 // www.queengoob.org
 // 
