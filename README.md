@@ -29,11 +29,11 @@ letter B), something like this:
 'M' is 'move to', and 'Q' is for Bezier curves. Open the resulting .svg 
 file in a web browser and you get something like this:
 
-![Rendering of font glyph](screenshot.png " The Letter B ")
+![Rendering of font glyph](assets/screenshot.png " The Letter B ")
 
 Another example: Floral Heart, Unicode 0x2766:
 
-![Rendering of font glyph](screenshot2.png " Floral Heart ")
+![Rendering of font glyph](assets/screenshot2.png " Floral Heart ")
 
 ### Current Status
 
@@ -163,7 +163,7 @@ Bezier Curve, http://en.wikipedia.org/wiki/B%C3%A9zier_curve , you can see simpl
 In this example, p0 is 'on the curve', p2 is also 'on the curve', but
 p1 is 'off the curve'. In other words, p1 is a 'control point'.
 
-![Bezier.gif](bezier.gif " The Letter B ")
+![Bezier.gif](assets/bezier.gif " The Letter B ")
 
 The math is not actually as complicated as it looks on the wiki page- 
 you can draw a Bezier Quadratic using only a ruler and a pencil. I.E. 
