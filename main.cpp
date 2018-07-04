@@ -56,7 +56,7 @@ void genSvg(std::string fontname, std::string charCode, std::string name) {
 }
 
 void create_svgs(std::string fontname) {
-	// -=- Basic Latin
+	// -=- Basic Latin (ASCII)
 
 	// ASCII Punctuation & Symbols
 	genSvg(fontname, "0x0021", "EXCLAMATION MARK");
