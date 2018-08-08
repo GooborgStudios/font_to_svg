@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(font_to_svg)
 
-add_executable(font_to_svg main.cpp font_to_svg.hpp)
+file(GLOB UNICODE_BLOCKS "${CMAKE_SOURCE_DIR}/unicode_blocks")
+
+add_executable(font_to_svg main.cpp font_to_svg.hpp ${UNICODE_BLOCKS})
 add_executable(xerexesExtractor xerexesExtractor.cpp font_to_svg.hpp)
 add_executable(example1 examples/example1.cpp font_to_svg.hpp)
 add_executable(example2 examples/example2.cpp font_to_svg.hpp)
