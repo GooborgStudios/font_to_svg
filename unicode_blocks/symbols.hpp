@@ -9,6 +9,24 @@
 // - Block Elements
 // - Geometric Shapes
 // 
+// Todo:
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#General_Punctuation
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Superscripts_and_Subscripts
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Currency_Symbols
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Letterlike_Symbols
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Number_Forms
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Arrows
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Mathematical_symbols
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Miscellaneous_Technical
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Optical_Character_Recognition
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Enclosed_Alphanumerics
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Box_Drawing
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Miscellaneous_Symbols
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Dingbats
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Notational_systems
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Alchemical_symbols
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Game_symbols
+// 
 
 #define UNICODE_SYMBOLS \
 	genSvg(fontname, "0x2013", "EN DASH"); \

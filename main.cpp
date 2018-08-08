@@ -5,7 +5,20 @@
 // 
 // This program takes a given TTF font file and generates SVGs for every available glyph.
 
-// TODO: Add more characters as listed on https://en.wikipedia.org/wiki/List_of_Unicode_characters
+// Todo (each as a separate file):
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Semitic_languages
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Thaana
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Brahmic_(Indic)_scripts
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Other_south_and_central_Asian_writing_systems
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Georgian
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#African_scripts
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#American_scripts
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Mongolian
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#East_Asian_writing_systems
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Southeast_Asian_writing_systems
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Alphabetic_Presentation_Forms
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Ancient_and_historic_scripts
+// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Shavian
 
 #include <iostream>
 #include <fstream>
