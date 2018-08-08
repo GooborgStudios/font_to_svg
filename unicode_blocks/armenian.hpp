@@ -3,6 +3,7 @@
 // Vinyl Darkscratch © 2018, MIT License.
 // www.queengoob.org
 // 
+// Unicode Standard Version: 11.0
 // This file contains the following unicode blocks:
 // - Armenian
 //
