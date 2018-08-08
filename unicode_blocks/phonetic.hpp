@@ -1,3 +1,15 @@
+//
+// unicode_blocks/phonetic.hpp - font_to_svg
+// Vinyl Darkscratch © 2018, MIT License.
+// www.queengoob.org
+// 
+// This file contains the following unicode blocks:
+// - IPA Extensions
+// - Spacing Modifier Letters
+// - Phonetic Extensions
+// - Phonetic Extensions Supplement
+// 
+
 #define IPA_EXTENSIONS \
 	genSvg(fontname, "0x0259", "LATIN SMALL LETTER SCHWA"); \
 	genSvg(fontname, "0x027C", "LATIN SMALL LETTER R WITH LONG LEG"); \

@@ -1,3 +1,16 @@
+//
+// unicode_blocks/combining_marks.hpp - font_to_svg
+// Vinyl Darkscratch © 2018, MIT License.
+// www.queengoob.org
+// 
+// This file contains the following unicode blocks:
+// - Combining Diacritical Marks
+// - Combining Diacritical Marks Extended
+// - Combining Half Marks
+// - Combining Diacritical Marks Supplement
+// - Combining Diacritical Marks for Symbols
+// 
+
 #define COMBINING_DIACRITICAL_MARKS \
 	genSvg(fontname, "0x0300", "COMBINING GRAVE ACCENT"); \
 	genSvg(fontname, "0x0301", "COMBINING ACUTE ACCENT"); \

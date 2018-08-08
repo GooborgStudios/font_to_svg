@@ -1,3 +1,19 @@
+//
+// unicode_blocks/latin.hpp - font_to_svg
+// Vinyl Darkscratch © 2018, MIT License.
+// www.queengoob.org
+// 
+// This file contains the following unicode blocks:
+// - Basic Latin
+// - Latin-1 Supplement
+// - Latin Extended-A
+// - Latin Extended-B
+// - Latin Extended Additional
+// - Latin Extended-C
+// - Latin Extended-D
+// - Latin Extended-E
+// 
+
 #define LATIN_ASCII \
 	genSvg(fontname, "0x0021", "EXCLAMATION MARK"); \
 	genSvg(fontname, "0x0022", "QUOTATION MARK"); \

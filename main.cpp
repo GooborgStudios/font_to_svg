@@ -3,24 +3,9 @@
 // Vinyl Darkscratch © 2018, MIT License.
 // www.queengoob.org
 // 
-// This program takes a given TTF font file and generates SVGs for every available glyph.  Currently supports:
-// - Basic Latin
-// - Latin-1 Supplement
-// - Latin Extended-A
-// - Latin Extended-B
-// - Latin Extended Additional
-// - Latin Extended-C
-// - Latin Extended-D
-// - Latin Extended-E
-// - IPA Extensions
-// - Spacing Modifier Letters
-// - Phonetic Extensions
-// - Phonetic Extensions Supplement
-// - Combining Diacritical Marks
-// - Combining Diacritical Marks Extended
-// - Combining Half Marks
-// - Combining Diacritical Marks Supplement
-// - Combining Diacritical Marks for Symbols
+// This program takes a given TTF font file and generates SVGs for every available glyph.
+// 
+// Embedded into this file is:
 // - Greek and Coptic
 // - Greek Extended
 // - Cyrillic
