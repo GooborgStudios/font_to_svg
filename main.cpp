@@ -7,8 +7,6 @@
 
 // Todo (each as a separate file):
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Brahmic_(Indic)_scripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#American_scripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Mongolian
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#East_Asian_writing_systems
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Southeast_Asian_writing_systems
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Alphabetic_Presentation_Forms
@@ -34,7 +32,7 @@
 #include "unicode_blocks/african.hpp"
 #include "unicode_blocks/american.hpp"
 #include "unicode_blocks/symbols.hpp"
-// #include "unicode_blocks/mongolian.hpp"
+#include "unicode_blocks/mongolian.hpp"
 // #include "unicode_blocks/east_asian.hpp"
 // #include "unicode_blocks/southeast_asian.hpp"
 // #include "unicode_blocks/alphabetic_presentation.hpp"
@@ -140,6 +138,9 @@ void create_svgs(std::string fontname) {
 	UNICODE_SYMBOLS
 	BLOCK_ELEMENTS
 	GEOMETRIC_SHAPES
+
+	MONGOLIAN
+	MONGOLIAN_SUPPLEMENT
 }
 
 int main(int argc, char * argv[]) {
