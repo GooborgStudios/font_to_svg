@@ -24,6 +24,7 @@
 #include <fstream>
 #include "font_to_svg.hpp"
 
+// Include each unicode block
 #include "unicode_blocks/latin.hpp"
 #include "unicode_blocks/phonetic.hpp"
 #include "unicode_blocks/combining_marks.hpp"
@@ -33,17 +34,20 @@
 #include "unicode_blocks/symbols.hpp"
 
 void genSvg(std::string fontname, std::string charCode, std::string name) {
-	// Obtain the given glyph
+	// Obtain the outline of the given glyph
 	font2svg::glyph g(fontname.c_str(), charCode);
 	std::string data = g.outline();
 
-	if (data != "<!-- font had 0 points -->" && data != "<!-- font had 0 contours -->") { // Create the file if the glyph exists
+	// Create the file if the glyph exists
+	if (data != "<!-- font had 0 points -->" && data != "<!-- font had 0 contours -->") {
+		// XXX If the folder doesn't exist, there will be no file output.  We should create the folder.
 		std::string fname = std::string("./Output/") + charCode + " - " + name + ".svg";
 		std::ofstream file(fname.c_str());
 		file << g.svgheader() << g.svgtransform() << g.svgborder() << data << g.svgfooter();
 		file.close();
 	}
 
+	// Cleanup
 	g.free();
 }
 
