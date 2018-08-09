@@ -33,7 +33,7 @@
 #include "unicode_blocks/mongolian.hpp"
 // #include "unicode_blocks/east_asian.hpp"
 #include "unicode_blocks/southeast_asian.hpp"
-// #include "unicode_blocks/alphabetic_presentation.hpp"
+#include "unicode_blocks/alphabetic_presentation.hpp"
 // #include "unicode_blocks/ancient.hpp"
 #include "unicode_blocks/shavian.hpp"
 
@@ -144,6 +144,8 @@ void create_svgs(std::string fontname) {
 	KAYAH_LI
 	PAHAWH_HMONG
 	PAU_CIN_HAU
+
+	ALPHABETIC_PRESENTATION_FORMS
 
 	SHAVIAN
 }
