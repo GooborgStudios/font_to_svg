@@ -7,7 +7,6 @@
 
 // Todo (each as a separate file):
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Brahmic_(Indic)_scripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#African_scripts
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#American_scripts
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Mongolian
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#East_Asian_writing_systems
@@ -32,7 +31,7 @@
 // #include "unicode_blocks/brahmic.hpp"
 #include "unicode_blocks/other_southcentral_asian.hpp"
 #include "unicode_blocks/georgian.hpp"
-// #include "unicode_blocks/african.hpp"
+#include "unicode_blocks/african.hpp"
 // #include "unicode_blocks/american.hpp"
 #include "unicode_blocks/symbols.hpp"
 // #include "unicode_blocks/mongolian.hpp"
@@ -115,6 +114,21 @@ void create_svgs(std::string fontname) {
 	GEORGIAN
 	GEORGIAN_EXTENDED
 	GEORGIAN_SUPPLEMENT
+
+	ADLAM
+	BAMUM
+	BAMUM_SUPPLEMENT
+	BASSA_VAH
+	ETHIOPIC
+	ETHIOPIC_SUPPLEMENT
+	ETHIOPIC_EXTENDED
+	ETHIOPIC_EXTENDED_A
+	MEDEFAIDRIN
+	MENDE_KIKAKUI
+	NKO
+	OSMANYA
+	TIFINAGH
+	VAI
 
 	UNICODE_SYMBOLS
 	BLOCK_ELEMENTS
