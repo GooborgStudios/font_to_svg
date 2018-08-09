@@ -10,22 +10,40 @@
 // - Geometric Shapes
 // 
 // Todo:
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#General_Punctuation
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Superscripts_and_Subscripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Currency_Symbols
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Letterlike_Symbols
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Number_Forms
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Arrows
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Mathematical_symbols
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Miscellaneous_Technical
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Optical_Character_Recognition
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Enclosed_Alphanumerics
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Box_Drawing
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Miscellaneous_Symbols
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Dingbats
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Notational_systems
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Alchemical_symbols
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Game_symbols
+// - https://en.wikipedia.org/wiki/General_Punctuation
+// - https://en.wikipedia.org/wiki/Superscripts_and_Subscripts
+// - https://en.wikipedia.org/wiki/Currency_Symbols_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Letterlike_Symbols
+// - https://en.wikipedia.org/wiki/Number_Forms
+// - https://en.wikipedia.org/wiki/Arrows_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Miscellaneous_Symbols_and_Arrows
+// - https://en.wikipedia.org/wiki/Supplemental_Arrows-A
+// - https://en.wikipedia.org/wiki/Supplemental_Arrows-B
+// - https://en.wikipedia.org/wiki/Supplemental_Arrows-C
+// - https://en.wikipedia.org/wiki/Mathematical_Operators
+// - https://en.wikipedia.org/wiki/Supplemental_Mathematical_Operators
+// - https://en.wikipedia.org/wiki/Miscellaneous_Mathematical_Symbols-A
+// - https://en.wikipedia.org/wiki/Miscellaneous_Mathematical_Symbols-B
+// - https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols
+// - https://en.wikipedia.org/wiki/Miscellaneous_Technical
+// - https://en.wikipedia.org/wiki/Optical_Character_Recognition_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Enclosed_Alphanumerics
+// - https://en.wikipedia.org/wiki/Box_Drawing
+// 
+// - https://en.wikipedia.org/wiki/Miscellaneous_Symbols
+// - https://en.wikipedia.org/wiki/Dingbat
+// - https://en.wikipedia.org/wiki/Braille_Patterns
+// - https://en.wikipedia.org/wiki/Musical_Symbols_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Byzantine_Musical_Symbols
+// - https://en.wikipedia.org/wiki/Ancient_Greek_Musical_Notation
+// - https://en.wikipedia.org/wiki/Duployan_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Shorthand_Format_Controls
+// - https://en.wikipedia.org/wiki/Sutton_SignWriting_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Alchemical_Symbols_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Chess_Symbols_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Domino_Tiles
+// - https://en.wikipedia.org/wiki/Mahjong_Tiles_(Unicode_block)
+// - https://en.wikipedia.org/wiki/Playing_cards_in_Unicode
 // 
 
 #define UNICODE_SYMBOLS \
@@ -53,6 +71,64 @@
 	genSvg(fontname, "0x203E", "OVERLINE"); \
 	genSvg(fontname, "0x2044", "FRACTION SLASH"); \
 	genSvg(fontname, "0x204A", "TIRONIAN ET SIGN");
+
+#define GENERAL_PUNCTUATION
+
+
+#define SUPERSCRIPTS_AND_SUBSCRIPTS
+
+
+#define CURRENCY_SYMBOLS
+
+
+#define LETTERLIKE_SYMBOLS
+
+
+#define NUMBER_FORMS
+
+
+#define ARROWS
+
+
+#define MISCELLANEOUS_SYMBOLS_AND_ARROWS
+
+
+#define SUPPLEMENTAL_ARROWS_A
+
+
+#define SUPPLEMENTAL_ARROWS_B
+
+
+#define SUPPLEMENTAL_ARROWS_C
+
+
+#define MATHEMATICAL_OPERATORS
+
+
+#define SUPPLEMENTAL_MATHEMATICAL_OPERATORS
+
+
+#define MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A
+
+
+#define MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B
+
+
+#define MATHEMATICAL_ALPHANUMERIC_SYMBOLS
+
+
+#define MISCELLANEOUS_TECHNICAL
+
+
+#define OPTICAL_CHARACTER_RECOGNITION
+
+
+#define ENCLOSED_ALPHANUMERICS
+
+
+#define BOX_DRAWING
+
+
 
 #define BLOCK_ELEMENTS \
 	genSvg(fontname, "0x2580", "UPPER HALF BLOCK"); \
@@ -185,3 +261,46 @@
 	genSvg(fontname, "0x25FD", "WHITE MEDIUM SMALL SQUARE"); \
 	genSvg(fontname, "0x25FE", "BLACK MEDIUM SMALL SQUARE"); \
 	genSvg(fontname, "0x25FF", "LOWER RIGHT TRIANGLE");
+
+#define MISCELLANEOUS_SYMBOLS
+
+
+#define DINGBAT
+
+
+#define BRAILLE_PATTERNS
+
+
+#define MUSICAL_SYMBOLS
+
+
+#define BYZANTINE_MUSICAL_SYMBOLS
+
+
+#define ANCIENT_GREEK_MUSICAL_NOTATION
+
+
+#define DUPLOYAN
+
+
+#define SHORTHAND_FORMAT_CONTROLS
+
+
+#define SUTTON_SIGNWRITING
+
+
+#define ALCHEMICAL_SYMBOLS
+
+
+#define CHESS_SYMBOLS
+
+
+#define DOMINO_TILES
+
+
+#define MAHJONG_TILES
+
+
+#define PLAYING_CARDS_IN_UNICODE
+
+

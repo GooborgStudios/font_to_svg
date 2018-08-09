@@ -51,7 +51,6 @@
 // - https://en.wikipedia.org/wiki/Meetei_Mayek_Extensions_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Modi_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Multani_(Unicode_block)
-// - https://en.wikipedia.org/wiki/Mon/Burmese/Myanmar_script_Unicode_blocks
 // - https://en.wikipedia.org/wiki/New_Tai_Lue_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Newa_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Ol_Chiki_(Unicode_block)
@@ -72,5 +71,193 @@
 // - https://en.wikipedia.org/wiki/Thai_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Tibetan_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Tirhuta_(Unicode_block)
+
+#define DEVANAGARI
+
+
+#define DEVANAGARI_EXTENDED
+
+
+#define VEDIC_EXTENSIONS
+
+
+#define BENGALI
+
+
+#define GURMUKHI
+
+
+#define GUJARATI
+
+
+#define ORIYA
+
+
+#define TAMIL
+
+
+#define TELUGU
+
+
+#define KANNADA
+
+
+#define MALAYALAM
+
+
+#define SINHALA
+
+
+#define SINHALA_ARCHAIC_NUMBERS
+
+
+#define AHOM
+
+
+#define BALINESE
+
+
+#define BATAK
+
+
+#define BHAIKSUKI
+
+
+#define BRAHMI
+
+
+#define BUHID
+
+
+#define BUGINESE
+
+
+#define CHAKMA
+
+
+#define CHAM
+
+
+#define COMMON_INDIC_NUMBER_FORMS
+
+
+#define DOGRA
+
+
+#define GRANTHA
+
+
+#define GUNJALA_GONDI
+
+
+#define HANUNOO
+
+
+#define JAVANESE
+
+
+#define KAITHI
+
+
+#define KHMER
+
+
+#define KHMER_SYMBOLS
+
+
+#define KHOJKI
+
+
+#define KHUDAWADI
+
+
+#define LAO
+
+
+#define LEPCHA
+
+
+#define LIMBU
+
+
+#define MAHAJANI
+
+
+#define MAKASAR
+
+
+#define MARCHEN
+
+
+#define MEETEI_MAYEK
+
+
+#define MEETEI_MAYEK_EXTENSIONS
+
+
+#define MODI
+
+
+#define MULTANI
+
+
+#define NEW_TAI_LUE
+
+
+#define NEWA
+
+
+#define OL_CHIKI
+
+
+#define PHAGS_PA
+
+
+#define REJANG
+
+
+#define SAURASHTRA
+
+
+#define SHARADA
+
+
+#define SIDDHAM
+
+
+#define SUNDANESE
+
+
+#define SUNDANESE_SUPPLEMENT
+
+
+#define SYLOTI_NAGRI
+
+
+#define TAGALOG
+
+
+#define TAGBANWA
+
+
+#define TAI_LE
+
+
+#define TAI_THAM
+
+
+#define TAI_VIET
+
+
+#define TAKRI
+
+
+#define THAI
+
+
+#define TIBETAN
+
+
+#define TIRHUTA
 
 

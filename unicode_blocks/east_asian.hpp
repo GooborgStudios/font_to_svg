@@ -64,3 +64,145 @@
 // - https://en.wikipedia.org/wiki/Yi_Syllables_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Yi_Radicals_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Yijing_Hexagram_Symbols_(Unicode_block)
+
+#define BOPOMOFO
+
+
+#define BOPOMOFO_EXTENDED
+
+
+#define CJK_UNIFIED_IDEOGRAPHS
+
+
+#define CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
+
+
+#define CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B
+
+
+#define CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C
+
+
+#define CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D
+
+
+#define CJK_UNIFIED_IDEOGRAPHS_EXTENSION_E
+
+
+#define CJK_UNIFIED_IDEOGRAPHS_EXTENSION_F
+
+
+#define CJK_COMPATIBILITY
+
+
+#define CJK_COMPATIBILITY_FORMS
+
+
+#define CJK_COMPATIBILITY_IDEOGRAPHS
+
+
+#define CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT
+
+
+#define CJK_RADICALS_SUPPLEMENT
+
+
+#define CJK_STROKES
+
+
+#define CJK_SYMBOLS_AND_PUNCTUATION
+
+
+#define COUNTING_ROD_NUMERALS
+
+
+#define ENCLOSED_ALPHANUMERIC_SUPPLEMENT
+
+
+#define ENCLOSED_CJK_LETTERS_AND_MONTHS
+
+
+#define ENCLOSED_IDEOGRAPHIC_SUPPLEMENT
+
+
+#define HALFWIDTH_AND_FULLWIDTH_FORMS
+
+
+#define HANGUL_SYLLABLES
+
+
+#define HANGUL_JAMO
+
+
+#define HANGUL_COMPATIBILITY_JAMO
+
+
+#define HANGUL_JAMO_EXTENDED_A
+
+
+#define HANGUL_JAMO_EXTENDED_B
+
+
+#define HIRAGANA
+
+
+#define IDEOGRAPHIC_DESCRIPTION_CHARACTERS
+
+
+#define IDEOGRAPHIC_SYMBOLS_AND_PUNCTUATION
+
+
+#define KANBUN
+
+
+#define KANGXI_RADICALS
+
+
+#define KATAKANA
+
+
+#define KANA_EXTENDED_A
+
+
+#define KANA_SUPPLEMENT
+
+
+#define KATAKANA_PHONETIC_EXTENSIONS
+
+
+#define LISU
+
+
+#define MIAO
+
+
+#define MODIFIER_TONE_LETTERS
+
+
+#define NUSHU
+
+
+#define SMALL_FORM_VARIANTS
+
+
+#define TAI_XUAN_JING_SYMBOLS
+
+
+#define TANGUT
+
+
+#define TANGUT_COMPONENTS
+
+
+#define VERTICAL_FORMS
+
+
+#define YI_SYLLABLES
+
+
+#define YI_RADICALS
+
+
+#define YIJING_HEXAGRAM_SYMBOLS
+
+

@@ -58,3 +58,154 @@
 // - https://en.wikipedia.org/wiki/Soyombo_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Ugaritic_(Unicode_block)
 // - https://en.wikipedia.org/wiki/Zanabazar_Square_(Unicode_block)
+
+#define AEGEAN_NUMBERS
+
+
+#define ANATOLIAN_HIEROGLYPHS
+
+
+#define ANCIENT_GREEK_NUMBERS
+
+
+#define ANCIENT_SYMBOLS
+
+
+#define AVESTAN
+
+
+#define CARIAN
+
+
+#define CAUCASIAN_ALBANIAN
+
+
+#define CUNEIFORM
+
+
+#define CUNEIFORM_NUMBERS_AND_PUNCTUATION
+
+
+#define CYPRIOT_SYLLABARY
+
+
+#define EARLY_DYNASTIC_CUNEIFORM
+
+
+#define EGYPTIAN_HIEROGLYPHS
+
+
+#define ELBASAN
+
+
+#define GLAGOLITIC
+
+
+#define GLAGOLITIC_SUPPLEMENT
+
+
+#define GOTHIC
+
+
+#define HATRAN
+
+
+#define IMPERIAL_ARAMAIC
+
+
+#define INDIC_SIYAQ_NUMBERS
+
+
+#define INSCRIPTIONAL_PAHLAVI
+
+
+#define INSCRIPTIONAL_PARTHIAN
+
+
+#define KHAROSHTHI
+
+
+#define LINEAR_A
+
+
+#define LINEAR_B_IDEOGRAMS
+
+
+#define LINEAR_B_SYLLABARY
+
+
+#define LYCIAN
+
+
+#define LYDIAN
+
+
+#define MANICHAEAN
+
+
+#define MAYAN_NUMERALS
+
+
+#define MEROITIC_CURSIVE
+
+
+#define MEROITIC_HIEROGLYPHS
+
+
+#define NABATAEAN
+
+
+#define OGHAM
+
+
+#define OLD_HUNGARIAN
+
+
+#define OLD_ITALIC
+
+
+#define OLD_NORTH_ARABIAN
+
+
+#define OLD_PERMIC
+
+
+#define OLD_PERSIAN
+
+
+#define OLD_SOGDIAN
+
+
+#define OLD_SOUTH_ARABIAN
+
+
+#define OLD_TURKIC
+
+
+#define PALMYRENE
+
+
+#define PHAISTOS_DISC
+
+
+#define PHOENICIAN
+
+
+#define PSALTER_PAHLAVI
+
+
+#define RUNIC
+
+
+#define SOGDIAN
+
+
+#define SOYOMBO
+
+
+#define UGARITIC
+
+
+#define ZANABAZAR_SQUARE
+
+
