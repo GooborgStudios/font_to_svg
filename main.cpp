@@ -8,10 +8,8 @@
 // Todo (each as a separate file):
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Brahmic_(Indic)_scripts
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#East_Asian_writing_systems
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Southeast_Asian_writing_systems
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Alphabetic_Presentation_Forms
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Ancient_and_historic_scripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Shavian
 
 #include <iostream>
 #include <fstream>
@@ -34,10 +32,10 @@
 #include "unicode_blocks/symbols.hpp"
 #include "unicode_blocks/mongolian.hpp"
 // #include "unicode_blocks/east_asian.hpp"
-// #include "unicode_blocks/southeast_asian.hpp"
+#include "unicode_blocks/southeast_asian.hpp"
 // #include "unicode_blocks/alphabetic_presentation.hpp"
 // #include "unicode_blocks/ancient.hpp"
-// #include "unicode_blocks/shavian.hpp"
+#include "unicode_blocks/shavian.hpp"
 
 void genSvg(std::string fontname, std::string charCode, std::string name) {
 	// Obtain the outline of the given glyph
@@ -141,6 +139,13 @@ void create_svgs(std::string fontname) {
 
 	MONGOLIAN
 	MONGOLIAN_SUPPLEMENT
+
+	HANIFI_ROHINGYA
+	KAYAH_LI
+	PAHAWH_HMONG
+	PAU_CIN_HAU
+
+	SHAVIAN
 }
 
 int main(int argc, char * argv[]) {
