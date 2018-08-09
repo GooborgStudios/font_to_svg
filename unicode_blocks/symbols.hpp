@@ -301,6 +301,6 @@
 #define MAHJONG_TILES
 
 
-#define PLAYING_CARDS_IN_UNICODE
+#define PLAYING_CARDS
 
 
