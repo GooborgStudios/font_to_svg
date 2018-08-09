@@ -6,9 +6,6 @@
 // This program takes a given TTF font file and generates SVGs for every available glyph.
 
 // Todo (each as a separate file):
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Brahmic_(Indic)_scripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#East_Asian_writing_systems
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Alphabetic_Presentation_Forms
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Ancient_and_historic_scripts
 
 #include <iostream>
@@ -24,17 +21,17 @@
 #include "unicode_blocks/armenian.hpp"
 #include "unicode_blocks/semitic.hpp"
 #include "unicode_blocks/thaana.hpp"
-// #include "unicode_blocks/brahmic.hpp"
+#include "unicode_blocks/brahmic.hpp"
 #include "unicode_blocks/other_southcentral_asian.hpp"
 #include "unicode_blocks/georgian.hpp"
 #include "unicode_blocks/african.hpp"
 #include "unicode_blocks/american.hpp"
 #include "unicode_blocks/symbols.hpp"
 #include "unicode_blocks/mongolian.hpp"
-// #include "unicode_blocks/east_asian.hpp"
+#include "unicode_blocks/east_asian.hpp"
 #include "unicode_blocks/southeast_asian.hpp"
 #include "unicode_blocks/alphabetic_presentation.hpp"
-// #include "unicode_blocks/ancient.hpp"
+#include "unicode_blocks/ancient.hpp"
 #include "unicode_blocks/shavian.hpp"
 
 void genSvg(std::string fontname, std::string charCode, std::string name) {
