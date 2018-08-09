@@ -154,6 +154,8 @@ int main(int argc, char * argv[]) {
 		exit(1);
 	}
 
+	// XXX Create the "Output" folder here.
+
 	create_svgs(argv[1]);
 
 	return 0;
