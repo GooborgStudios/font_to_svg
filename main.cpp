@@ -32,7 +32,7 @@
 #include "unicode_blocks/other_southcentral_asian.hpp"
 #include "unicode_blocks/georgian.hpp"
 #include "unicode_blocks/african.hpp"
-// #include "unicode_blocks/american.hpp"
+#include "unicode_blocks/american.hpp"
 #include "unicode_blocks/symbols.hpp"
 // #include "unicode_blocks/mongolian.hpp"
 // #include "unicode_blocks/east_asian.hpp"
@@ -129,6 +129,13 @@ void create_svgs(std::string fontname) {
 	OSMANYA
 	TIFINAGH
 	VAI
+
+	CHEROKEE
+	CHEROKEE_SUPPLEMENT
+	DESERET
+	OSAGE
+	UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS
+	UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED
 
 	UNICODE_SYMBOLS
 	BLOCK_ELEMENTS
