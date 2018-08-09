@@ -6,11 +6,7 @@
 // This program takes a given TTF font file and generates SVGs for every available glyph.
 
 // Todo (each as a separate file):
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Semitic_languages
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Thaana
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Brahmic_(Indic)_scripts
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Other_south_and_central_Asian_writing_systems
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Georgian
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#African_scripts
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#American_scripts
 // - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Mongolian
@@ -31,7 +27,20 @@
 #include "unicode_blocks/greek_and_coptic.hpp"
 #include "unicode_blocks/cyrillic.hpp"
 #include "unicode_blocks/armenian.hpp"
+#include "unicode_blocks/semitic.hpp"
+#include "unicode_blocks/thaana.hpp"
+// #include "unicode_blocks/brahmic.hpp"
+#include "unicode_blocks/other_southcentral_asian.hpp"
+#include "unicode_blocks/georgian.hpp"
+// #include "unicode_blocks/african.hpp"
+// #include "unicode_blocks/american.hpp"
 #include "unicode_blocks/symbols.hpp"
+// #include "unicode_blocks/mongolian.hpp"
+// #include "unicode_blocks/east_asian.hpp"
+// #include "unicode_blocks/southeast_asian.hpp"
+// #include "unicode_blocks/alphabetic_presentation.hpp"
+// #include "unicode_blocks/ancient.hpp"
+// #include "unicode_blocks/shavian.hpp"
 
 void genSvg(std::string fontname, std::string charCode, std::string name) {
 	// Obtain the outline of the given glyph
@@ -82,6 +91,30 @@ void create_svgs(std::string fontname) {
 	CYRILLIC_EXTENDED_C
 
 	ARMENIAN
+
+	ARABIC
+	ARABIC_SUPPLEMENT
+	ARABIC_EXTENDED_A
+	ARABIC_PRESENTATION_FORMS_A
+	ARABIC_PRESENTATION_FORMS_B
+	RUMI_NUMERAL_SYMBOLS
+	ARABIC_MATHEMATIC_ALPHABETIC_SYMBOLS
+	HEBREW
+	MANDAIC
+	SAMARITAN
+	SYRIAC
+	SYRIAC_SUPPLEMENT
+
+	THAANA
+
+	MASARAM_GONDI
+	MRO
+	SORA_SOMPENG
+	WARANG_CITI
+
+	GEORGIAN
+	GEORGIAN_EXTENDED
+	GEORGIAN_SUPPLEMENT
 
 	UNICODE_SYMBOLS
 	BLOCK_ELEMENTS
