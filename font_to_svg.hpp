@@ -49,6 +49,8 @@ endorsement.
 #include <vector>
 #include <string>
 
+// #define DEBUG_MODE
+
 namespace font2svg {
 
 std::stringstream debug;
@@ -116,7 +118,9 @@ There are three main components.
 std::string do_outline(std::vector<FT_Vector> points, std::vector<char> tags, std::vector<short> contours)
 {
 	std::stringstream debug, svg;
-	std::cout << "<!-- do outline -->\n";
+	#ifdef DEBUG_MODE
+		std::cout << "<!-- do outline -->\n";
+	#endif
 	if (points.size()==0) return "<!-- font had 0 points -->";
 	if (contours.size()==0) return "<!-- font had 0 contours -->";
 	svg.str("");
@@ -210,7 +214,9 @@ std::string do_outline(std::vector<FT_Vector> points, std::vector<char> tags, st
 		svg << " Z\n";
 	}
 	svg << "\n  '/>";
-	std::cout << "\n<!--\n" << debug.str() << " \n-->\n";
+	#ifdef DEBUG_MODE
+		std::cout << "\n<!--\n" << debug.str() << " \n-->\n";
+	#endif
 	return svg.str();
 }
 
@@ -294,7 +300,9 @@ public:
 		bbwidth = face->bbox.xMax - face->bbox.xMin;
 		tags = ftoutline.tags;
 		contours = ftoutline.contours;
-		std::cout << debug.str();
+		#ifdef DEBUG_MODE
+			std::cout << debug.str();
+		#endif
 	}
 
 	std::string svgheader() {
