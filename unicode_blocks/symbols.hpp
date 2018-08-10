@@ -81,11 +81,11 @@
 	genSvg(fontname, "0x2008", "PUNCTUATION SPACE"); \
 	genSvg(fontname, "0x2009", "THIN SPACE"); \
 	genSvg(fontname, "0x200A", "HAIR SPACE"); \
-	genSvg(fontname, "0x200B", "ZERO WIDTH SPACE (alias ZWSP)"); \
-	genSvg(fontname, "0x200C", "ZERO WIDTH NON-JOINER (alias ZWNJ)"); \
-	genSvg(fontname, "0x200D", "ZERO WIDTH JOINER (alias ZWJ)"); \
-	genSvg(fontname, "0x200E", "LEFT-TO-RIGHT MARK (alias LRM)"); \
-	genSvg(fontname, "0x200F", "RIGHT-TO-LEFT MARK (alias RLM)"); \
+	genSvg(fontname, "0x200B", "ZERO WIDTH SPACE"); \
+	genSvg(fontname, "0x200C", "ZERO WIDTH NON-JOINER"); \
+	genSvg(fontname, "0x200D", "ZERO WIDTH JOINER"); \
+	genSvg(fontname, "0x200E", "LEFT-TO-RIGHT MARK"); \
+	genSvg(fontname, "0x200F", "RIGHT-TO-LEFT MARK"); \
 	genSvg(fontname, "0x2010", "HYPHEN"); \
 	genSvg(fontname, "0x2011", "NON-BREAKING HYPHEN"); \
 	genSvg(fontname, "0x2012", "FIGURE DASH"); \
@@ -112,12 +112,12 @@
 	genSvg(fontname, "0x2027", "HYPHENATION POINT"); \
 	genSvg(fontname, "0x2028", "LINE SEPARATOR"); \
 	genSvg(fontname, "0x2029", "PARAGRAPH SEPARATOR"); \
-	genSvg(fontname, "0x202A", "LEFT-TO-RIGHT EMBEDDING (alias LRE)"); \
-	genSvg(fontname, "0x202B", "RIGHT-TO-LEFT EMBEDDING (alias RLE)"); \
-	genSvg(fontname, "0x202C", "POP DIRECTIONAL FORMATTING (alias PDF)"); \
-	genSvg(fontname, "0x202D", "LEFT-TO-RIGHT OVERRIDE (alias LRO)"); \
-	genSvg(fontname, "0x202E", "RIGHT-TO-LEFT OVERRIDE (alias RLO)"); \
-	genSvg(fontname, "0x202F", "NARROW NO-BREAK SPACE (alias NNBSP)"); \
+	genSvg(fontname, "0x202A", "LEFT-TO-RIGHT EMBEDDING"); \
+	genSvg(fontname, "0x202B", "RIGHT-TO-LEFT EMBEDDING"); \
+	genSvg(fontname, "0x202C", "POP DIRECTIONAL FORMATTING"); \
+	genSvg(fontname, "0x202D", "LEFT-TO-RIGHT OVERRIDE"); \
+	genSvg(fontname, "0x202E", "RIGHT-TO-LEFT OVERRIDE"); \
+	genSvg(fontname, "0x202F", "NARROW NO-BREAK SPACE"); \
 	genSvg(fontname, "0x2030", "PER MILLE SIGN"); \
 	genSvg(fontname, "0x2031", "PER TEN THOUSAND SIGN"); \
 	genSvg(fontname, "0x2032", "PRIME"); \
@@ -165,16 +165,16 @@
 	genSvg(fontname, "0x205C", "DOTTED CROSS"); \
 	genSvg(fontname, "0x205D", "TRICOLON"); \
 	genSvg(fontname, "0x205E", "VERTICAL FOUR DOTS"); \
-	genSvg(fontname, "0x205F", "MEDIUM MATHEMATICAL SPACE (alias MMSP)"); \
-	genSvg(fontname, "0x2060", "WORD JOINER (alias WJ)"); \
+	genSvg(fontname, "0x205F", "MEDIUM MATHEMATICAL SPACE"); \
+	genSvg(fontname, "0x2060", "WORD JOINER"); \
 	genSvg(fontname, "0x2061", "FUNCTION APPLICATION"); \
 	genSvg(fontname, "0x2062", "INVISIBLE TIMES"); \
 	genSvg(fontname, "0x2063", "INVISIBLE SEPARATOR"); \
 	genSvg(fontname, "0x2064", "INVISIBLE PLUS"); \
-	genSvg(fontname, "0x2066", "LEFT-TO-RIGHT ISOLATE (alias LRI)"); \
-	genSvg(fontname, "0x2067", "RIGHT-TO-LEFT ISOLATE (alias RLI)"); \
-	genSvg(fontname, "0x2068", "FIRST STRONG ISOLATE (alias FSI)"); \
-	genSvg(fontname, "0x2069", "POP DIRECTIONAL ISOLATE (alias PDI)"); \
+	genSvg(fontname, "0x2066", "LEFT-TO-RIGHT ISOLATE"); \
+	genSvg(fontname, "0x2067", "RIGHT-TO-LEFT ISOLATE"); \
+	genSvg(fontname, "0x2068", "FIRST STRONG ISOLATE"); \
+	genSvg(fontname, "0x2069", "POP DIRECTIONAL ISOLATE"); \
 	genSvg(fontname, "0x206A", "INHIBIT SYMMETRIC SWAPPING"); \
 	genSvg(fontname, "0x206B", "ACTIVATE SYMMETRIC SWAPPING"); \
 	genSvg(fontname, "0x206C", "INHIBIT ARABIC FORM SHAPING"); \
@@ -285,7 +285,7 @@
 	genSvg(fontname, "0x2115", "DOUBLE-STRUCK CAPITAL N"); \
 	genSvg(fontname, "0x2116", "NUMERO SIGN"); \
 	genSvg(fontname, "0x2117", "SOUND RECORDING COPYRIGHT"); \
-	genSvg(fontname, "0x2118", "SCRIPT CAPITAL P (alias WEIERSTRASS ELLIPTIC FUNCTION)"); \
+	genSvg(fontname, "0x2118", "SCRIPT CAPITAL P"); \
 	genSvg(fontname, "0x2119", "DOUBLE-STRUCK CAPITAL P"); \
 	genSvg(fontname, "0x211A", "DOUBLE-STRUCK CAPITAL Q"); \
 	genSvg(fontname, "0x211B", "SCRIPT CAPITAL R"); \
@@ -639,9 +639,9 @@
 	genSvg(fontname, "0x2B77", "NORTH EAST TRIANGLE-HEADED ARROW TO BAR"); \
 	genSvg(fontname, "0x2B78", "SOUTH EAST TRIANGLE-HEADED ARROW TO BAR"); \
 	genSvg(fontname, "0x2B79", "SOUTH WEST TRIANGLE-HEADED ARROW TO BAR"); \
-	genSvg(fontname, "0x2B7A", "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE HORIZONTAL STROKE (alias LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE)"); \
+	genSvg(fontname, "0x2B7A", "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE HORIZONTAL STROKE"); \
 	genSvg(fontname, "0x2B7B", "UPWARDS TRIANGLE-HEADED ARROW WITH DOUBLE HORIZONTAL STROKE"); \
-	genSvg(fontname, "0x2B7C", "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE HORIZONTAL STROKE (alias RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE)"); \
+	genSvg(fontname, "0x2B7C", "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE HORIZONTAL STROKE"); \
 	genSvg(fontname, "0x2B7D", "DOWNWARDS TRIANGLE-HEADED ARROW WITH DOUBLE HORIZONTAL STROKE"); \
 	genSvg(fontname, "0x2B7E", "HORIZONTAL TAB KEY"); \
 	genSvg(fontname, "0x2B7F", "VERTICAL TAB KEY"); \
@@ -3029,8 +3029,8 @@
 	genSvg(fontname, "0x2445", "OCR BOW TIE"); \
 	genSvg(fontname, "0x2446", "OCR BRANCH BANK IDENTIFICATION"); \
 	genSvg(fontname, "0x2447", "OCR AMOUNT OF CHECK"); \
-	genSvg(fontname, "0x2448", "OCR DASH (alias MICR ON US SYMBOL)"); \
-	genSvg(fontname, "0x2449", "OCR CUSTOMER ACCOUNT NUMBER (alias MICR DASH SYMBOL)"); \
+	genSvg(fontname, "0x2448", "OCR DASH"); \
+	genSvg(fontname, "0x2449", "OCR CUSTOMER ACCOUNT NUMBER"); \
 	genSvg(fontname, "0x244A", "OCR DOUBLE BACKSLASH");
 
 #define ENCLOSED_ALPHANUMERICS \
@@ -4598,7 +4598,7 @@
 	genSvg(fontname, "0x1D0C2", "BYZANTINE MUSICAL SYMBOL FTHORA DIATONIKI NI ANO"); \
 	genSvg(fontname, "0x1D0C3", "BYZANTINE MUSICAL SYMBOL FTHORA MALAKON CHROMA DIFONIAS"); \
 	genSvg(fontname, "0x1D0C4", "BYZANTINE MUSICAL SYMBOL FTHORA MALAKON CHROMA MONOFONIAS"); \
-	genSvg(fontname, "0x1D0C5", "BYZANTINE MUSICAL SYMBOL FHTORA SKLIRON CHROMA VASIS (alias BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS)"); \
+	genSvg(fontname, "0x1D0C5", "BYZANTINE MUSICAL SYMBOL FHTORA SKLIRON CHROMA VASIS"); \
 	genSvg(fontname, "0x1D0C6", "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA SYNAFI"); \
 	genSvg(fontname, "0x1D0C7", "BYZANTINE MUSICAL SYMBOL FTHORA NENANO"); \
 	genSvg(fontname, "0x1D0C8", "BYZANTINE MUSICAL SYMBOL CHROA ZYGOS"); \

@@ -28,7 +28,25 @@
 #include "unicode_blocks/american.hpp"
 #include "unicode_blocks/symbols.hpp"
 #include "unicode_blocks/mongolian.hpp"
-#include "unicode_blocks/east_asian.hpp"
+#include "unicode_blocks/east_asian_p1.hpp"
+#include "unicode_blocks/east_asian_p2.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_p1.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_p2.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_p3.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_p4.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_a.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p1.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p2.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p3.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p4.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p5.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p6.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_b_p7.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_c.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_d.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_e.hpp"
+#include "unicode_blocks/cjk_unified_ideographs_extension_f.hpp"
+#include "unicode_blocks/cjk_compatibility.hpp"
 #include "unicode_blocks/southeast_asian.hpp"
 #include "unicode_blocks/alphabetic_presentation.hpp"
 #include "unicode_blocks/ancient.hpp"
@@ -236,26 +254,11 @@ void create_svgs(std::string fontname) {
 
 	BOPOMOFO
 	BOPOMOFO_EXTENDED
-	CJK_UNIFIED_IDEOGRAPHS
-	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
-	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B
-	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C
-	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D
-	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_E
-	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_F
-	CJK_COMPATIBILITY
-	CJK_COMPATIBILITY_FORMS
-	CJK_COMPATIBILITY_IDEOGRAPHS
-	CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT
-	CJK_RADICALS_SUPPLEMENT
-	CJK_STROKES
-	CJK_SYMBOLS_AND_PUNCTUATION
 	COUNTING_ROD_NUMERALS
 	ENCLOSED_ALPHANUMERIC_SUPPLEMENT
 	ENCLOSED_CJK_LETTERS_AND_MONTHS
 	ENCLOSED_IDEOGRAPHIC_SUPPLEMENT
 	HALFWIDTH_AND_FULLWIDTH_FORMS
-	HANGUL_SYLLABLES
 	HANGUL_JAMO
 	HANGUL_COMPATIBILITY_JAMO
 	HANGUL_JAMO_EXTENDED_A
@@ -272,15 +275,41 @@ void create_svgs(std::string fontname) {
 	LISU
 	MIAO
 	MODIFIER_TONE_LETTERS
-	NUSHU
 	SMALL_FORM_VARIANTS
 	TAI_XUAN_JING_SYMBOLS
-	TANGUT
-	TANGUT_COMPONENTS
 	VERTICAL_FORMS
 	YI_SYLLABLES
 	YI_RADICALS
 	YIJING_HEXAGRAM_SYMBOLS
+
+	HANGUL_SYLLABLES
+	NUSHU
+	TANGUT
+	TANGUT_COMPONENTS
+
+	CJK_UNIFIED_IDEOGRAPHS_PART_1
+	CJK_UNIFIED_IDEOGRAPHS_PART_2
+	CJK_UNIFIED_IDEOGRAPHS_PART_3
+	CJK_UNIFIED_IDEOGRAPHS_PART_4
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_1
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_2
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_3
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_4
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_5
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_6
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_PART_7
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_E
+	CJK_UNIFIED_IDEOGRAPHS_EXTENSION_F
+	CJK_COMPATIBILITY
+	CJK_COMPATIBILITY_FORMS
+	CJK_COMPATIBILITY_IDEOGRAPHS
+	CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT
+	CJK_RADICALS_SUPPLEMENT
+	CJK_STROKES
+	CJK_SYMBOLS_AND_PUNCTUATION
 
 	HANIFI_ROHINGYA
 	KAYAH_LI
