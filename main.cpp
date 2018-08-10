@@ -5,8 +5,7 @@
 // 
 // This program takes a given TTF font file and generates SVGs for every available glyph.
 
-// Todo (each as a separate file):
-// - https://en.wikipedia.org/wiki/List_of_Unicode_characters#Ancient_and_historic_scripts
+// XXX Figure out more efficient database format -- compilation time is way too high.
 
 #include <iostream>
 #include <fstream>
