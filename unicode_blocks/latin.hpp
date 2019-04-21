@@ -282,6 +282,7 @@
 	genSvg(fontname, "0x0146", "LATIN SMALL LETTER N WITH CEDILLA"); \
 	genSvg(fontname, "0x0147", "LATIN CAPITAL LETTER N WITH CARON"); \
 	genSvg(fontname, "0x0148", "LATIN SMALL LETTER N WITH CARON"); \
+	genSvg(fontname, "0x0149", "LATIN SMALL LETTER N PRECEDED B"); \
 	genSvg(fontname, "0x014A", "LATIN CAPITAL LETTER ENG"); \
 	genSvg(fontname, "0x014B", "LATIN SMALL LETTER ENG"); \
 	genSvg(fontname, "0x014C", "LATIN CAPITAL LETTER O WITH MACRON"); \
