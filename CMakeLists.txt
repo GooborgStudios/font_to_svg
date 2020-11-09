@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(font_to_svg)
+project(font_to_svg DESCRIPTION "Generate SVG files from font glyphs")
 
 file(GLOB UNICODE_BLOCKS "${CMAKE_SOURCE_DIR}/unicode_blocks")
 
