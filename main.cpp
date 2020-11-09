@@ -16,14 +16,13 @@
 
 using json = nlohmann::json;
 
-void genSvg(std::string fontname, std::string charCode, std::string name) {
+void genSvg(std::string output, std::string fontname, std::string charCode, std::string name) {
     // Obtain the outline of the given glyph
     font2svg::glyph g(fontname.c_str(), charCode);
 
     // Create the file if the glyph exists
     if (!g.isempty()) {
-        std::string fname =
-            std::string("./Output/") + charCode + " - " + name + ".svg";
+        std::string fname = output + charCode + " - " + name + ".svg";
         std::ofstream file(fname.c_str());
         file << g.svg();
         file.close();
@@ -33,7 +32,7 @@ void genSvg(std::string fontname, std::string charCode, std::string name) {
     g.free();
 }
 
-void create_svgs(std::string fontname) {
+void create_svgs(std::string output, std::string fontname) {
     json blocks;
     std::ifstream jsonfile("unicode.json");
     jsonfile >> blocks;
@@ -43,7 +42,7 @@ void create_svgs(std::string fontname) {
                   << std::endl;
 
         for (auto &glyph : glyphs) {
-            genSvg(fontname, glyph["code"], glyph["name"]);
+            genSvg(output, fontname, glyph["code"], glyph["name"]);
         }
     }
 }
@@ -52,12 +51,15 @@ int main(int argc, char *argv[]) {
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " font.ttf\n"
                   << std::endl
-                  << "Output: ./Output/*.svg" << std::endl;
+                  << "Output: ./Output/<fontname>/*.svg" << std::endl;
         exit(1);
     }
 
-    std::filesystem::create_directories("./Output");
-    create_svgs(argv[1]);
+    std::stringstream output;
+    output << "./Output/" << argv[1] << "/";
+
+    std::filesystem::create_directories(output.str());
+    create_svgs(output.str(), argv[1]);
 
     return 0;
 }
