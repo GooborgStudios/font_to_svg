@@ -9,7 +9,11 @@
 #include <iostream>
 #include <fstream>
 
+#include <nlohmann/json.hpp>
+
 #include "font_to_svg.hpp"
+
+using json = nlohmann::json;
 
 void genSvg(std::string fontname, std::string charCode, std::string name) {
 	// Obtain the outline of the given glyph
@@ -30,7 +34,15 @@ void genSvg(std::string fontname, std::string charCode, std::string name) {
 }
 
 void create_svgs(std::string fontname) {
-	
+	json blocks;
+	std::ifstream jsonfile("unicode.json");
+	jsonfile >> blocks;
+
+	for (auto& [blockname, glyphs] : blocks.items()) {
+		for (auto& glyph : glyphs) {
+			genSvg(fontname, glyph["code"], glyph["name"]);
+		}
+	}
 }
 
 int main(int argc, char * argv[]) {
