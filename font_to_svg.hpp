@@ -170,6 +170,7 @@ namespace font2svg {
 				bool this_isctl = !this_tagbit1;
 				bool next_isctl = !next_tagbit1;
 				bool nextnext_isctl = !nextnext_tagbit1;
+
 				debug << " [" << thisi << "]";
 				debug << "[" << !this_tagbit1 << "]";
 				debug << " <" << nexti << ">";
@@ -344,7 +345,7 @@ namespace font2svg {
 			tmp << "\n\n <!-- make sure glyph is visible within svg window -->";
 			int yadj = gm.horiBearingY + gm.vertBearingY + 100;
 			int xadj = 100;
-			tmp << "\n <g fill-rule='nonzero' "
+			tmp << "\n <g fill-rule='nonzero'"
 				<< " transform='translate(" << xadj << " " << yadj << ")'"
 				<< ">";
 			return tmp.str();
@@ -367,7 +368,7 @@ namespace font2svg {
 			int x2 = gm.horiAdvance;
 			int y1 = -gm.vertBearingY - gm.height;
 			int y2 = y1 + gm.vertAdvance;
-			tmp << "\n <path stroke='blue' fill='none' "
+			tmp << "\n <path stroke='blue' fill='none'"
 				   "stroke-dasharray='10,16' d='"
 				<< " M" << x1 << "," << y1 << " M" << x1 << "," << y2 << " L"
 				<< x2 << "," << y2 << " L" << x2 << "," << y1 << " L" << x1
@@ -424,8 +425,7 @@ namespace font2svg {
 			tmp.str("");
 			tmp << "\n\n  <!-- draw straight lines between points -->";
 			tmp << "\n  <path fill='none' stroke='green' d='";
-			tmp << "\n   M " << ftpoints[0].x << "," << ftpoints[0].y << "\n";
-			tmp << "\n  '/>";
+			tmp << "M " << ftpoints[0].x << "," << ftpoints[0].y << "'/>";
 			for (int i = 0; i < ftoutline.n_points - 1; i++) {
 				std::string dash_mod("");
 				for (int j = 0; j < ftoutline.n_contours; j++) {
