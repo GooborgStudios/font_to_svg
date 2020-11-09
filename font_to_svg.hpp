@@ -474,11 +474,20 @@ namespace font2svg {
 			return tmp.str();
 		}
 
-		std::string svg() {
+		std::string svg(bool debug) {
 			tmp2.str("");
-			tmp2 << svgheader() << svgtransform() << svgborder() << outline()
-				 << svgfooter();
+			
+			tmp2 << svgheader() << svgtransform() << svgborder();
+			if (debug) {
+				tmp2 << axes() << typography_box() << points() << pointlines() << labelpts();
+			}
+			tmp2 << outline() << svgfooter();
+
 			return tmp2.str();
+		}
+
+		std::string svg() {
+			return svg(false);
 		}
 	};
 
