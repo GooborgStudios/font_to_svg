@@ -4,6 +4,21 @@ font_to_svg
 This code will convert a single character in a TrueType(R) font file 
 into an SVG 'path' shape.
 
+## Dependencies
+
+- Core
+    - CMake
+    - Freetype
+- Main Script (GUI)
+    - RapidJSON
+    - WxWidgets
+
+## Build
+
+This project uses CMake as its build tool.  A simple, standard `mkdir build; cd build; cmake ..; make -j8` will do the trick.
+
+## API
+
 ### basic usage:
 
 Let's say you have a TrueType font file, such as the popular 
