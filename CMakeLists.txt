@@ -21,7 +21,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 # Dependencies
 
 # Freetype
-find_package(Freetype)
+find_package(Freetype REQUIRED)
 include_directories(${FREETYPE_INCLUDE_DIRS})
 target_link_libraries(font_to_svg ${FREETYPE_LIBRARIES})
 target_link_libraries(example1 ${FREETYPE_LIBRARIES})
