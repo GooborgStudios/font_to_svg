@@ -3,6 +3,7 @@
 // Gooborg Studios (www.gooborg.com) © 2018-2020, MIT License.
 // 
 // This program takes a given TTF font file and generates SVGs for every available glyph.
+// 
 
 #include <iostream>
 #include <fstream>

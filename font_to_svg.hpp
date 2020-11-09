@@ -1,6 +1,6 @@
 // font_to_svg.hpp - Read Font in TrueType (R) format, write SVG
 // Copyright Don Bright 2013 <hugh.m.bright@gmail.com>
-// Slight alterations by Gooborg Studios, 2018.
+// with modifications by Gooborg Studios, 2018-2020.
 /*
 
   This software is provided 'as-is', without any express or implied
@@ -24,7 +24,7 @@
 
 /*
 
-This program reads a TTF (TrueType (R)) file and outputs an SVG path.
+This program reads a TTF (TrueType (R)) file and outputs svg.
 
 See these sites for more info.
 Basic Terms: http://www.freetype.org/freetype2/docs/glyphs/glyphs-3.html
