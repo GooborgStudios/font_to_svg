@@ -26,6 +26,7 @@ def download_file():
 def parse_xml():
 	chars = []
 	blocks = []
+	aliases = []
 
 	print('Parsing XML...')
 	context = iter(iterparse(open('/tmp/ucd/ucd.all.flat.xml', 'rb')))
@@ -34,12 +35,21 @@ def parse_xml():
 		if event == "end":
 			tagname = elem.tag.split('}')[1]
 
-			if tagname == 'char':
+			if tagname == 'name-alias':
+				if elem.get('type') == 'control':
+					aliases.append(elem.get('alias'))
+			elif tagname == 'char':
 				if (elem.get('cp')):
+					name = elem.get('na')
+					if (not name and len(aliases)):
+						name = aliases[0]
+
 					chars.append({
 						'code': "0x" + elem.get('cp'),
-						'name': elem.get('na')
+						'name': name
 					})
+
+					aliases = []
 			elif tagname == 'block':
 				blocks.append({
 					'name': elem.get('name'),
