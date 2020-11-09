@@ -250,22 +250,7 @@ font files (w .ttf extensions) on your system .
 You can match this up with what you did in Charmap, then maybe you can find
 the truetype you are looking for. 
 
-### Todo
-
-get real name of glyph (like unicode name)
-
-investigate linux's auto-finding of unicode glyphs
-
-auto-find fonts on linux, not require cmdline fontname?
-
-accept U+4034 (hex) input format
-
-regression test
-
-Long term - opentype? pango / harfbuzz?
-
 ### Trademark disclaimer
 
 TrueType is a trademark of Apple, Inc. This library is not in any way 
 affiliated nor endorsed by Apple, Inc. 
-
