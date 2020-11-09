@@ -8,10 +8,8 @@
 
 #include <iostream>
 #include <fstream>
-#include "font_to_svg.hpp"
 
-// Include each unicode block
-#include "unicode_blocks/latin.hpp"
+#include "font_to_svg.hpp"
 
 void genSvg(std::string fontname, std::string charCode, std::string name) {
 	// Obtain the outline of the given glyph
@@ -32,14 +30,7 @@ void genSvg(std::string fontname, std::string charCode, std::string name) {
 }
 
 void create_svgs(std::string fontname) {
-	LATIN_ASCII
-	LATIN_1SUPPLEMENT
-	LATIN_EXTENDED_A
-	LATIN_EXTENDED_B
-	LATIN_EXTENDED_ADDITIONAL
-	LATIN_EXTENDED_C
-	LATIN_EXTENDED_D
-	LATIN_EXTENDED_E
+	
 }
 
 int main(int argc, char * argv[]) {
