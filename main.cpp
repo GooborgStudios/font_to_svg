@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 
 #include <nlohmann/json.hpp>
 
@@ -22,7 +23,6 @@ void genSvg(std::string fontname, std::string charCode, std::string name) {
 
 	// Create the file if the glyph exists
 	if (data != "<!-- font had 0 points -->" && data != "<!-- font had 0 contours -->") {
-		// XXX If the folder doesn't exist, there will be no file output.  We should create the folder.
 		std::string fname = std::string("./Output/") + charCode + " - " + name + ".svg";
 		std::ofstream file(fname.c_str());
 		file << g.svgheader() << g.svgtransform() << g.svgborder() << data << g.svgfooter();
@@ -52,8 +52,7 @@ int main(int argc, char * argv[]) {
 		exit(1);
 	}
 
-	// XXX Create the "Output" folder here.
-
+	std::filesystem::create_directories("./Output");
 	create_svgs(argv[1]);
 
 	return 0;
