@@ -33,7 +33,7 @@ def parse_xml():
 			if tagname == 'char':
 				if (elem.get('cp')):
 					chars.append({
-						'code': elem.get('cp'),
+						'code': "0x" + elem.get('cp'),
 						'name': elem.get('na')
 					})
 			elif tagname == 'block':
