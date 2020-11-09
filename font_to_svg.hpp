@@ -1,5 +1,6 @@
 // font_to_svg.hpp - Read Font in TrueType (R) format, write SVG
 // Copyright Don Bright 2013 <hugh.m.bright@gmail.com>
+// Slight alterations by Gooborg Studios, 2018.
 /*
 
   This software is provided 'as-is', without any express or implied
