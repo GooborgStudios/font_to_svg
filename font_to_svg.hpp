@@ -306,6 +306,10 @@ public:
 		#endif
 	}
 
+	bool isempty() {
+		return (ftoutline.n_points == 0 || ftoutline.n_contours == 0);
+	}
+
 	std::string svgheader() {
 		tmp.str("");
 

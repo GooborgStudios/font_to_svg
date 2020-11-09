@@ -18,10 +18,9 @@ using json = nlohmann::json;
 void genSvg(std::string fontname, std::string charCode, std::string name) {
 	// Obtain the outline of the given glyph
 	font2svg::glyph g(fontname.c_str(), charCode);
-	std::string data = g.outline();
 
 	// Create the file if the glyph exists
-	if (data != "<!-- font had 0 points -->" && data != "<!-- font had 0 contours -->") {
+	if (!g.isempty()) {
 		std::string fname = std::string("./Output/") + charCode + " - " + name + ".svg";
 		std::ofstream file(fname.c_str());
 		file << g.svg();
