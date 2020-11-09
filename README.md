@@ -250,18 +250,6 @@ font files (w .ttf extensions) on your system .
 You can match this up with what you did in Charmap, then maybe you can find
 the truetype you are looking for. 
 
-### Linux non-cmake build
-
-    # BSD/Linux - 
-
-    # install freetype using your package manager
-    # (something like sudo apt-get install libfreetype6-dev)
-    # then copy a .ttf file to this directory for convenience
-    cp `locate FreeSerif.ttf | tail -1 ` .
-    ./build.sh
-    ./example1 ./FreeSerif.ttf 66 > /tmp/x.svg 
-    firefox /tmp/x.svg
-
 ### Todo
 
 get real name of glyph (like unicode name)
