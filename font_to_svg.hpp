@@ -236,7 +236,7 @@ public:
 	char* tags;
 	short* contours;
 
-	std::stringstream debug, tmp;
+	std::stringstream debug, tmp, tmp2;
 	int bbwidth, bbheight;
 
 	glyph( ttf_file &f, std::string unicode_str )
@@ -456,6 +456,12 @@ public:
 		tmp.str("");
 		tmp << "\n </g>\n</svg>\n";
 		return tmp.str();
+	}
+
+	std::string svg() {
+		tmp2.str("");
+		tmp2 << g.svgheader() << g.svgtransform() << g.svgborder() << g.outline() << g.svgfooter();
+		return tmp2.str();
 	}
 };
 

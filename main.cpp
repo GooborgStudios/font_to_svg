@@ -24,7 +24,7 @@ void genSvg(std::string fontname, std::string charCode, std::string name) {
 	if (data != "<!-- font had 0 points -->" && data != "<!-- font had 0 contours -->") {
 		std::string fname = std::string("./Output/") + charCode + " - " + name + ".svg";
 		std::ofstream file(fname.c_str());
-		file << g.svgheader() << g.svgtransform() << g.svgborder() << data << g.svgfooter();
+		file << g.svg();
 		file.close();
 	}
 
