@@ -1,6 +1,7 @@
 //
-// main.cpp - font_to_svg
-// Gooborg Studios (www.gooborg.com) © 2018-2020, MIT License.
+// main.cpp - TTF SVG Extractor
+// Gooborg Studios (www.gooborg.com) © 2018-2020, BSD-3-Clause License.
+// See LICENSE file for more information
 //
 // This program takes a given TTF font file and generates SVGs for every
 // available glyph.

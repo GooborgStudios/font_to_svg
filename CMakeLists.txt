@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(font_to_svg DESCRIPTION "Generate SVG files from font glyphs")
+project(font_to_svg DESCRIPTION "Extract SVG from the glyphs in a TrueType font")
 
 # C++17
 set(CMAKE_CXX_STANDARD 17)

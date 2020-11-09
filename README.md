@@ -1,15 +1,16 @@
-font_to_svg
-===========
+# TTF SVG Extractor
 
-This code will convert a single character in a TrueType(R) font file 
-into an SVG 'path' shape.
+Gooborg Studios (www.gooborg.com) © 2018-2020, BSD-3-Clause License.
+font_to_svg library: donbright <hugh.m.bright gmail.com> © 2013, BSD-3-Clause License. Modifications by Gooborg Studios (www.gooborg.com) © 2018-2020.
+
+This program will convert all of the glyphs in a TrueType(R) font file into SVG 'path' shapes.
 
 ## Dependencies
 
 - A C++17-compatible compiler
 - CMake
 - Python 3+
-- [Freetype](https://www.freetype.org/)
+- [Freetype](https://www.freetype.org/) - required for lib
 - [nlohmann_json](https://github.com/nlohmann/json)
 - WxWidgets (later)
 
@@ -21,126 +22,69 @@ This project uses CMake as its build tool.  A simple, standard `mkdir build; cd 
 
 ## API
 
-### basic usage:
+This program also features an API written by [Don Bright](https://github.com/donbright/font_to_svg) with some modifications.  The API is a header library, so there is no need to compile the library for use.  Note, however, that the library depends on Freetype.
+
+### Basic Usage
 
 Let's say you have a TrueType font file, such as the popular 
 FreeSans.ttf. Let's pull out the path information for the letter "B" and 
 transform it into SVG. A simple C++ program code like the following can 
 do that.
 
-    #include <font_to_svg.hpp>
-    int main()
-    {
-        font_to_svg::glyph g( "FreeSans.ttf", 66 );
-        std::cout << g.outline();
-    }
+```c++
+#include <font_to_svg.hpp>
+int main() {
+	font_to_svg::glyph g("FreeSans.ttf", 66);
+	std::cout << g.svg();
+}
+```
 
 Compile and run, and the program will generate an SVG path out of the 
 TrueType information for the character of Unicode U+0066 (the Latin 
 letter B), something like this:
 
-    <svg>
-    <path d='M 591,-180 Q 591,-150 580,-121 Q 569,-92 543,-63 ... Z />
-    </svg>
+```xml
+<svg width='2684px' height='1519px' xmlns='http://www.w3.org/2000/svg' version='1.1'>
+    <g fill-rule='nonzero' transform='translate(100 964)'>
+        <rect fill='none' stroke='black' width='2683' height='1518'/>
+        <path fill='black' stroke='black' fill-opacity='0.45' stroke-width='2' d='M 623,-208 Q 623,-114 564,-57 Q 505,0 408,0 L 79,0 L 79,-729 L 375,-729 Q 436,-729 481,-711 Q 526,-693 548,-663 Q 571,-634 581,-604 Q 591,-575 591,-544 Q 591,-432 490,-385 Q 560,-358 591,-316 Q 623,-274 623,-208 Z M 498,-415 M 498,-531 Q 498,-647 352,-647 L 172,-647 L 172,-415 L 352,-415 Q 498,-415 498,-531 Z M 399,-82 Q 448,-82 479,-103 Q 510,-125 520,-151 Q 530,-177 530,-207 Q 530,-264 496,-298 Q 462,-333 399,-333 L 172,-333 L 172,-82 L 399,-82 Z' />
+</g>
+</svg>
+```
 
-'M' is 'move to', and 'Q' is for Bezier curves. Open the resulting .svg 
+Open the resulting .svg 
 file in a web browser and you get something like this:
 
-![Rendering of font glyph](assets/screenshot.png " The Letter B ")
+![Rendering of font glyph](assets/screenshot.png "The Letter B")
 
 Another example: Floral Heart, Unicode 0x2766:
 
-![Rendering of font glyph](assets/screenshot2.png " Floral Heart ")
+![Rendering of font glyph](assets/screenshot2.png "Floral Heart")
 
 ### Current Status
 
-This project has some bugs but will handle 'standard' fonts reasonably well.
+This library has some bugs but will handle 'standard' fonts reasonably well.
 
-Currently this project consists of a C++ language header that can used 
-in conjuction with the Freetype library to create a basic conversion 
-program that will extract a single character from a .ttf file and create 
-a matching .svg file.
-
-The program is stable for basic use. It can output plain glyph shapes or 
-it can also output 'debugging' information like the node points & lines. 
+The library is stable for basic use. It can output plain glyph shapes,
+along with 'debugging' information like the node points & lines. 
 There are some bugs with bounding boxes and other 'typographic box' 
 issues like Bearing. Also calculation of the SVG "g" tag has some issues 
 with transforms/footers.
 
-The code does not currently support OpenType or it's features, such as 
-ligatures. It does not support creating an "SVG Font". It only does very 
-basic conversion of Truetype glyphs to SVG path shapes. It might not 
-be useful for web fonts or other usages. 
+The code does not currently support OpenType or its features, such as 
+ligatures; it only does very basic conversion of Truetype glyphs to SVG path shapes. It might not be useful for web fonts or other usages.
 
-### More example programs
+### Using in Your Own Project
 
-There are several example programs included. They use the cmake build 
-system ( http://www.cmake.org ). For example:
-     
-     cmake .
-     make
-     ./example1 `locate tahoma.ttf` 66 > out.svg 
-     firefox out.svg
+As mentioned above, `font_to_svg` is a header library, so you don't need to 
+compile any libraries -- just include the header.
 
-Example 1 and Example 2 just do basic output of a single character into 
-a .svg path. The first argument is a truetype font filename, and the 
-second argument is a Unicode codepoint number. For example:
-
-    ./example2 ./FreeSerif.ttf 66 > example2.svg 
-
-In the line above, 66 = unicode/ascii for the letter 'B'. You can use 
-hexadecimal numbers as well. For example, the Cherokee Letter O has 
-hexadecimal Unicode point 0x13A3:
-
-    ./example1 ./FreeSerif.ttf 0x13A3 > example2.cho.svg
-
-To view the resulting svg file, it is easiest to use a browswer like 
-Firefox. Go to 'file/open' and point it to your output file. Or type 
-something like 'file:///tmp/x.svg' into your address bar. You can also 
-get the Firefox addon that can auto-reload files when they change on 
-disk.
-
-Another option is to use svg view/edit programs like Inkscape or Adobe
-Illustrator.
-
-Example 3 was created by github user Ebraminio to generate multiple .svg 
-files from a single GPL font of ancient Persian letters ( Xerxes.ttf, 
-available by a web search )
-
-Example 4 was created by [Vinyl Darkscratch](http://www.queengoob.org) to
-generate an .svg file for every single glyph available in a given font.
-
-### Detail on using in your own project
-
-As noted, font_to_svg is a 'header library' so you dont need to 
-compile any libraries just include the header and use it. You will still 
-need to link to Freetype however, using your build system.
-
-Freetype's website is here: http://www.freetype.org/
-
-font_to_svg uses freetype to deal with vaguaries and variations of 
-Truetype file formats. font_to_svg does not use any of Freetype's bitmap 
-font-rendering code. font_to_svg is a pure "outline curve" renderer to be 
+`font_to_svg` uses Freetype to deal with vaguaries and variations of 
+Truetype file formats. The library does not use any of Freetype's bitmap 
+font-rendering code; it is a pure "outline curve" renderer to be 
 used for vector/curve based output.
 
-Font_to_svg comes with a very permissive BSD style copyright license 
-described in the LICENSE file in this distribution. Acknowledgment in 
-the product documentation would be appreciated but is not required.
-
-To understand the usage, look at the files named 'example*.cpp' that come
-with the source code. You can output the bare svg path data, or a bunch
-of debugging information.
-
-Don't forget that some fonts have restrictive copyright licenses that 
-forbid this type of conversion. You can use fonts from 
-http://openfontlibrary.org If you want to be safe from accusations of 
-copyright violation.
-
-### Finding cool Unicode points
-
-http://www.fileformat.info/info/unicode/block/index.htm
-
-### How does Truetype actually work then? How does this program work?
+### How It Works
 
 Truetype fonts consist of a group of characters layed out in a file. The 
 truetype file format is very complicated, with various issues related to 
@@ -180,7 +124,7 @@ Bezier Curve, http://en.wikipedia.org/wiki/B%C3%A9zier_curve , you can see simpl
 In this example, p0 is 'on the curve', p2 is also 'on the curve', but
 p1 is 'off the curve'. In other words, p1 is a 'control point'.
 
-![Bezier.gif](assets/bezier.gif " The Letter B ")
+![Bezier.gif](assets/bezier.gif "The Letter B")
 
 _Image Source: [Wikipedia](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#/media/File:B%C3%A9zier_2_big.gif)_
 
@@ -218,56 +162,16 @@ Please see these sites for more info.
  * SVG paths: http://www.w3schools.com/svg/svg_path.asp
  * SVG paths + nonzero: http://www.w3.org/TR/SVG/painting.html#FillProperties
 
-### What about rendering multiple characters?
-
-To do this properly for all languages, you actually need a 'layout 
-engine', like Harfbuzz and/or Pango. These are at present, far beyond 
-the scope of this project. 
-
-It may be possible to render strings of characters in 'non-connected' 
-scripts, for example English ( Latin alphabet), or Chinese, using the 
-basic bounding box information. However this library, at present, is 
-probably not very suitable for ligature + combination scripts like 
-Arabic or Devanagari.
-
-### Test characters
-
-Nice characters that show unusual patterns. Good for testing.
-
-    ./example1 FreeSerif.ttf 67 > xa67.svg
-    ./example1 FreeSerif.ttf 68 > xa68.svg
-    ./example1 FreeSerif.ttf 0x2766 > x2766.svg
-    ./example1 FreeSerif.ttf 0x2767 > x2767.svg
-    ./example1 FreeSerif.ttf 0x1f01a > x1f01a.svg
-    ./example1 FreeSerif.ttf 0x48007 > x48007.svg
-
-### Other projects
+## Other Projects
 
 Sean Barret's amazing TTF parser + renderer:
 https://github.com/nothings/stb/blob/master/stb_truetype.h
 
-The "Batik" project does similar stuff. It is Java:
+The "Batik" project does similar stuff in Java:
 
 http://xmlgraphics.apache.org/batik/tools/font-converter.html
 
-### Finding A Unicode font
-
-An easy resource is here:
-
-http://openfontlibrary.org
-
-If you have linux, you can explore as follows:
-
-Run 'charmap', under ubuntu, and then right click on interesting looking 
-glyphs. It will give you some rough idea of the font name.
-
-Then do 'locate ttf | grep ttf$' which will give a list of all Truetype 
-font files (w .ttf extensions) on your system .
-
-You can match this up with what you did in Charmap, then maybe you can find
-the truetype you are looking for. 
-
-### Trademark disclaimer
+## Trademark Disclaimer
 
 TrueType is a trademark of Apple, Inc. This library is not in any way 
 affiliated nor endorsed by Apple, Inc. 

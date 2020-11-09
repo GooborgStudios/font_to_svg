@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# download_unicode_data.py - font_to_svg
-# Gooborg Studios (www.gooborg.com) © 2018-2020, MIT License.
+#
+# download_unicode_data.py - TTF SVG Extractor
+# Gooborg Studios (www.gooborg.com) © 2018-2020, BSD-3-Clause License.
+# See LICENSE file for more information
+#
 # Download and parse the Unicde XML to obtain character and block data.
+#
 
 from urllib.request import urlopen
 from tempfile import NamedTemporaryFile

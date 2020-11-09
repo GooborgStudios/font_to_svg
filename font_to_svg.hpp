@@ -1,46 +1,11 @@
-// font_to_svg.hpp - Read Font in TrueType (R) format, write SVG
-// Copyright Don Bright 2013 <hugh.m.bright@gmail.com>
+//
+// font_to_svg.hpp - TTF SVG Extractor
+// Don Bright <hugh.m.bright@gmail.com> © 2013, BSD-3-Clause License.
 // with modifications by Gooborg Studios (https://www.gooborg.com), © 2018-2020.
-/*
-
-  This software is provided 'as-is', without any express or implied
-  warranty.  In no event will the authors be held liable for any damages
-  arising from the use of this software.
-
-  Permission is granted to anyone to use this software for any purpose,
-  including commercial applications, and to alter it and redistribute it
-  freely, subject to the following restrictions:
-
-  1. The origin of this software must not be misrepresented; you must not
-         claim that you wrote the original software. If you use this software
-         in a product, an acknowledgment in the product documentation would be
-         appreciated but is not required.
-  2. Altered source versions must be plainly marked as such, and must not be
-         misrepresented as being the original software.
-  3. This notice may not be removed or altered from any source distribution.
-
-  License based on zlib license, by Jean-loup Gailly and Mark Adler
-*/
-
-/*
-
-This program reads a TTF (TrueType (R)) file and outputs svg.
-
-See these sites for more info.
-Basic Terms: http://www.freetype.org/freetype2/docs/glyphs/glyphs-3.html
-FType + outlines:
-http://www.freetype.org/freetype2/docs/reference/ft2-outline_processinhtml FType
-+ contours: http://www.freetype.org/freetype2/docs/glyphs/glyphs-6.html TType
-contours: https://developer.apple.com/fonts/TTRefMan/RM01/Chap1.html TType
-contours2: http://www.truetype-typography.com/ttoutln.htm Non-zero winding rule:
-http://en.wikipedia.org/wiki/Nonzero-rule SVG paths:
-http://www.w3schools.com/svg/svg_path.asp SVG paths + nonzero:
-http://www.w3.org/TR/SVG/paintinhtml#FillProperties
-
-TrueType is a trademark of Apple Inc. Use of this mark does not imply
-endorsement.
-
-*/
+// See LICENSE file for more information
+//
+// Header for reading a TTF font and exporting SVG
+//
 
 #pragma once
 
@@ -50,8 +15,6 @@ endorsement.
 #include <sstream>
 #include <string>
 #include <vector>
-
-// #define DEBUG_MODE
 
 namespace font2svg {
 
