@@ -464,7 +464,7 @@ public:
 
 	std::string svg() {
 		tmp2.str("");
-		tmp2 << g.svgheader() << g.svgtransform() << g.svgborder() << g.outline() << g.svgfooter();
+		tmp2 << svgheader() << svgtransform() << svgborder() << outline() << svgfooter();
 		return tmp2.str();
 	}
 };
