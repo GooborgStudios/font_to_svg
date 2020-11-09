@@ -1,7 +1,6 @@
 //
 // main.cpp - font_to_svg
-// Vinyl Darkscratch © 2018, MIT License.
-// www.queengoob.org
+// Gooborg Studios (www.gooborg.com) © 2018-2020, MIT License.
 // 
 // This program takes a given TTF font file and generates SVGs for every available glyph.
 
