@@ -51,12 +51,15 @@ def parse_xml():
 
 	data = {}
 
+	i = 0
 	for block in blocks:
-		data[block['name']] = list(filter(
+		s = '{0:03d}|{1}'.format(i, block['name'])
+		data[s] = list(filter(
 			lambda x: int(x['code'], 16) >= block['range'][0] and
 					  int(x['code'], 16) <= block['range'][1],
 			chars
 		))
+		i += 1
 
 	return data
 
