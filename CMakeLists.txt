@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 2.8)
 
 project(font_to_svg DESCRIPTION "Generate SVG files from font glyphs")
 
+# C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # Executables
 add_executable(font_to_svg main.cpp font_to_svg.hpp ${CMAKE_CURRENT_BINARY_DIR}/unicode.json)
 add_executable(example1 examples/example1.cpp font_to_svg.hpp)
