@@ -6,12 +6,14 @@ into an SVG 'path' shape.
 
 ## Dependencies
 
-- Core
-    - CMake
-    - Freetype
-- Main Script (GUI)
-    - RapidJSON
-    - WxWidgets
+- A C++17-compatible compiler
+- CMake
+- Python 3+
+- [Freetype](https://www.freetype.org/)
+- [nlohmann_json](https://github.com/nlohmann/json)
+- WxWidgets (later)
+
+(macOS users: all of these dependencies are available via [Homebrew](https://brew.sh/))
 
 ## Build
 
