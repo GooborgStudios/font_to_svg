@@ -4,8 +4,6 @@
 // 
 // This program takes a given TTF font file and generates SVGs for every available glyph.
 
-// XXX Figure out more efficient database format -- cannot run program with everything together.
-
 #include <iostream>
 #include <fstream>
 #include <filesystem>
