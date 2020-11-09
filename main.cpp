@@ -39,6 +39,8 @@ void create_svgs(std::string fontname) {
 	jsonfile >> blocks;
 
 	for (auto& [blockname, glyphs] : blocks.items()) {
+		std::cout << "Generating SVG for block: " << blockname << "..." << std::endl;
+
 		for (auto& glyph : glyphs) {
 			genSvg(fontname, glyph["code"], glyph["name"]);
 		}
