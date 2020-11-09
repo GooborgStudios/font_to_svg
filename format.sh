@@ -1,1 +1,1 @@
-clang-format -style=file -i *.cpp *.hpp examples/*.cpp
+clang-format -style=file -i *.cpp *.hpp

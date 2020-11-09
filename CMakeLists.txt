@@ -7,10 +7,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Executables
+# Executable
 add_executable(font_to_svg main.cpp font_to_svg.hpp ${CMAKE_CURRENT_BINARY_DIR}/unicode.json)
-add_executable(example1 examples/example1.cpp font_to_svg.hpp)
-add_executable(example2 examples/example2.cpp font_to_svg.hpp)
 
 # Collect unicode data
 add_custom_target(get_unicode ALL)
@@ -24,8 +22,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 find_package(Freetype REQUIRED)
 include_directories(${FREETYPE_INCLUDE_DIRS})
 target_link_libraries(font_to_svg ${FREETYPE_LIBRARIES})
-target_link_libraries(example1 ${FREETYPE_LIBRARIES})
-target_link_libraries(example2 ${FREETYPE_LIBRARIES})
 
 # RapidJSON
 find_package(nlohmann_json)
