@@ -24,6 +24,8 @@ void genSvg(std::string output, std::string fontname, std::string charCode,
 
 	// Create the file if the glyph exists
 	if (!g.isempty()) {
+		std::filesystem::create_directories(output);
+
 		std::string fname = output + charCode + " - " + name + ".svg";
 		std::ofstream file(fname.c_str());
 		file << g.svg();
@@ -49,7 +51,10 @@ void create_svgs(std::string output, std::string fontname) {
 				  << i << "/" << blockcount << ")..." << std::endl;
 
 		for (auto &[code, glyphname] : glyphs.items()) {
-			genSvg(output, fontname, code, glyphname);
+			genSvg(
+				output + std::string("/" + i + "-" + blockname + "/"),
+				fontname, code, glyphname
+			);
 		}
 	}
 }
@@ -64,8 +69,6 @@ int main(int argc, char *argv[]) {
 
 	std::stringstream output;
 	output << "./Output/" << argv[1] << "/";
-
-	std::filesystem::create_directories(output.str());
 	create_svgs(output.str(), argv[1]);
 
 	return 0;
