@@ -26,8 +26,3 @@ target_link_libraries(font_to_svg ${FREETYPE_LIBRARIES})
 # RapidJSON
 find_package(nlohmann_json)
 target_link_libraries(font_to_svg nlohmann_json::nlohmann_json)
-
-# wxWidgets
-# find_package(wxWidgets COMPONENTS core base)
-# include(${wxWidgets_USE_FILE})
-# target_link_libraries(font_to_svg ${wxWidgets_LIBRARIES})

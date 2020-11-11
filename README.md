@@ -12,7 +12,6 @@ This program will convert all of the glyphs in a TrueType(R) font file into SVG 
 - Python 3+
 - [Freetype](https://www.freetype.org/) - required for lib
 - [nlohmann_json](https://github.com/nlohmann/json)
-- WxWidgets (later)
 
 (macOS users: all of these dependencies are available via [Homebrew](https://brew.sh/))
 
