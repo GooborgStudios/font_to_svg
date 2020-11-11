@@ -40,7 +40,7 @@ def parse_xml():
 					aliases.append(elem.get('alias'))
 			elif tagname == 'char':
 				if (elem.get('cp')):
-					name = elem.get('na')
+					name = elem.get('na') or elem.get('na1')
 					if (not name and len(aliases)):
 						name = aliases[0]
 
