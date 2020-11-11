@@ -24,7 +24,7 @@ def download_file():
 		unpack_archive(tfile.name, '/tmp/ucd', format = 'zip')
 
 def parse_xml():
-	chars = []
+	chars = {}
 	blocks = []
 	aliases = []
 
@@ -40,15 +40,7 @@ def parse_xml():
 					aliases.append(elem.get('alias'))
 			elif tagname == 'char':
 				if (elem.get('cp')):
-					name = elem.get('na') or elem.get('na1')
-					if (not name and len(aliases)):
-						name = aliases[0]
-
-					chars.append({
-						'code': "0x" + elem.get('cp'),
-						'name': name
-					})
-
+					chars["0x" + elem.get('cp')] = elem.get('na') or elem.get('na1') or (aliases[0] if len(aliases) else "")
 					aliases = []
 			elif tagname == 'block':
 				blocks.append({
@@ -65,13 +57,13 @@ def parse_xml():
 
 	data = {}
 
-	i = 0
+	i = 1
 	for block in blocks:
-		s = '{0:03d}|{1}'.format(i, block['name'])
-		data[s] = list(filter(
-			lambda x: int(x['code'], 16) >= block['range'][0] and
-					  int(x['code'], 16) <= block['range'][1],
-			chars
+		s = '{0:03d}: {1}'.format(i, block['name'])
+		data[s] = dict(filter(
+			lambda c: int(c[0], 16) >= block['range'][0] and
+					  int(c[0], 16) <= block['range'][1],
+			chars.items()
 		))
 		i += 1
 

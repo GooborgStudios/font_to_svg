@@ -39,12 +39,17 @@ void create_svgs(std::string output, std::string fontname) {
 	std::ifstream jsonfile("unicode.json");
 	jsonfile >> blocks;
 
-	for (auto &[blockname, glyphs] : blocks.items()) {
-		std::cout << "Generating SVG for block: " << blockname << "..."
-				  << std::endl;
+	int blockcount = blocks.size();
 
-		for (auto &glyph : glyphs) {
-			genSvg(output, fontname, glyph["code"], glyph["name"]);
+	for (auto &[block, glyphs] : blocks.items()) {
+		std::string i = block.substr(0, block.find(": "));
+		std::string blockname = block.substr(block.find(": ") + 2);
+
+		std::cout << "Generating SVG for block: " << blockname << " ("
+				  << i << "/" << blockcount << ")..." << std::endl;
+
+		for (auto &[code, glyphname] : glyphs.items()) {
+			genSvg(output, fontname, code, glyphname);
 		}
 	}
 }
